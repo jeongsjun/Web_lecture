@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>실습</title>
+  </head>
+  <body>
+    input1 <input type="text" id = "input1">
+    input2 <input type="text" id = "input2">
+    <input type="button" value = "입력" id = "summit">
+    <input type="button" value = "입력2" id = "summit">
+  </body>
+  <script>
+    document.getElementById('summit').addEventListener('click', function(){
+      let input1 = document.getElementById('input1').value
+      let input2 = document.getElementById('input2').value
+
+      let sum = Number(input1) + Number(input2)
+
+      if (sum >= 10){
+        console.log("두 수의 합은 10 이상입니다.");
+      } else {
+        console.log("두 수의 합은 10 미만입니다.");
+      }
+    });
+  </script>
+</html>

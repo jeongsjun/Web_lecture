@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    숫자 1 : <input type="text" id = "number1"><br>
+    숫자 2 : <input type="text" id = "number2"><br>
+    숫자 3 : <input type="text" id = "number3"><br>
+    <input type="button" value="계산" id = "calculate">
+  </body>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    let sum = 0;
+    let multi = 1;
+    let maxNum;
+    let minNum;
+
+    $("#calculate").click(function(){
+      let num1 = Number($('#number1').val());
+      let num2 = Number($('#number2').val());
+      let num3 = Number($('#number3').val());
+
+      // sum = num1 + num2 + num3;
+      // multi = num1 * num2 * num3;
+      // maxNum = Math.max(num1, num2, num3);
+      // minNum = Math.min(num1, num2, num3);
+
+      // if ((num1 > num2) && (num1 > num3)) {
+      //   maxNum = num1;
+      // } else if ((num2 > num1) && (num2 > num3)) {
+      //   maxNum = num2;
+      // } else if ((num3 > num1) && (num3 > num2)) {
+      //   maxNum = num3;
+      // }
+      //
+      // if ((num1 < num2) && (num1 < num3)) {
+      //   minNum = num1;
+      // } else if ((num2 < num1) && (num2 < num3)) {
+      //   minNum = num2;
+      // } else if ((num3 < num1) && (num3 < num2)) {
+      //   minNum = num3;
+      // }
+
+      // 배열을 이용한 방법
+      let numArray = new Array(num1, num2, num3)
+      for (let i = 0; i < numArray.length; i++) {
+        sum += numArray[i];
+        multi *= numArray[i];
+      }
+
+      maxNum = Math.max(...numArray);
+      minNum = Math.min(...numArray);
+
+      console.log("합 : " + sum);
+      console.log("곱 : " + multi);
+      console.log("가장 큰수 : " + maxNum);
+      console.log("가장 작은 수 : " + minNum);
+    });
+  </script>
+</html>

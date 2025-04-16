@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    id <input type="text" id = "inputID"><br>
+    password <input type="password" id = "inputPW"> <input type="button" value="로그인" id="submit">
+  </body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    let myID = "polytech";
+    let myPW = "12341234";
+
+    document.getElementById('submit').addEventListener('click', function(){
+      let inputID = document.getElementById('inputID').value;
+      let inputPW = document.getElementById('inputPW').value;
+
+      if ((inputID == myID) && (inputPW == myPW)) {
+        console.log("로그인 성공");
+      } else {
+        console.log("로그인 실패");
+      }
+    });
+
+    // jquery 사용법
+    $("#submit").click(function() {
+      let inputID = $('#inputID').val();
+      let inputPW = $('#inputPW').val();
+
+      if ((inputID == myID) && (inputPW == myPW)) {
+        console.log("로그인 성공");
+      } else {
+        console.log("로그인 실패");
+      }
+    });
+
+  </script>
+</html>

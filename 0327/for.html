@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  </body>
+  <script>
+    for (let i = 1; i < 11; i++) {
+      console.log(i);
+    }
+
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);
+    }
+
+    for (let i = 1; !(i > 10); i++) {
+      console.log(i);
+    }
+
+    for (let i = 1; !(i >= 11); i++) {
+      console.log(i);
+    }
+
+    for (let i = 1; !(i==11); i++) {
+      console.log(i);
+    }
+
+    for (let i = 0; i < 10; i++) {
+      console.log(i+1);
+    }
+
+    for (let i = 0; i < 10;) {
+      console.log(i+1);
+      i++;
+    }
+
+    for (let i = 2; i < 21; i += 2) {
+      console.log(i/2);
+    }
+
+    for (let i = 3; i < 31; i += 3) {
+      console.log(i/3);
+    }
+
+    let minus = -9
+    for (let i = 10; i > 0; i--) {
+      console.log(i + minus);
+      minus += 2
+    }
+
+    let minus = -4
+    for (let i = 5; i > -5; i--) {
+      console.log(i + minus);
+      minus += 2
+    }
+
+    let i = 1;
+    for (;;) {
+      if (i > 10) {
+        break;
+      }
+      console.log(i);
+      i++;
+    }
+  </script>
+</html>
