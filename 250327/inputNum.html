@@ -1,3 +1,4 @@
+<!-- 숫자 세 개를 입력받아 버튼 클릭 시 콘솔에 합, 곱, 가장 큰 수, 가장 작은 수를 출력하세요. -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,6 +6,7 @@
     <title></title>
   </head>
   <body>
+    <!-- 숫자 입력 영역 생성-->
     숫자 1 : <input type="text" id = "number1"><br>
     숫자 2 : <input type="text" id = "number2"><br>
     숫자 3 : <input type="text" id = "number3"><br>
@@ -12,47 +14,26 @@
   </body>
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
+    // 합, 곱, 최대값, 최소값 변수 선언
     let sum = 0;
     let multi = 1;
     let maxNum;
     let minNum;
 
+    // '계산' 버튼 클릭 시 이벤트 처리
     $("#calculate").click(function(){
+      // 입력한 숫자 값 불러오기
       let num1 = Number($('#number1').val());
       let num2 = Number($('#number2').val());
       let num3 = Number($('#number3').val());
 
-      // sum = num1 + num2 + num3;
-      // multi = num1 * num2 * num3;
-      // maxNum = Math.max(num1, num2, num3);
-      // minNum = Math.min(num1, num2, num3);
+      // 합, 곱, 최대값, 최소값 계산
+      sum = num1 + num2 + num3;
+      multi = num1 * num2 * num3;
+      maxNum = Math.max(num1, num2, num3);
+      minNum = Math.min(num1, num2, num3);
 
-      // if ((num1 > num2) && (num1 > num3)) {
-      //   maxNum = num1;
-      // } else if ((num2 > num1) && (num2 > num3)) {
-      //   maxNum = num2;
-      // } else if ((num3 > num1) && (num3 > num2)) {
-      //   maxNum = num3;
-      // }
-      //
-      // if ((num1 < num2) && (num1 < num3)) {
-      //   minNum = num1;
-      // } else if ((num2 < num1) && (num2 < num3)) {
-      //   minNum = num2;
-      // } else if ((num3 < num1) && (num3 < num2)) {
-      //   minNum = num3;
-      // }
-
-      // 배열을 이용한 방법
-      let numArray = new Array(num1, num2, num3)
-      for (let i = 0; i < numArray.length; i++) {
-        sum += numArray[i];
-        multi *= numArray[i];
-      }
-
-      maxNum = Math.max(...numArray);
-      minNum = Math.min(...numArray);
-
+      // 계산 결과 출력
       console.log("합 : " + sum);
       console.log("곱 : " + multi);
       console.log("가장 큰수 : " + maxNum);

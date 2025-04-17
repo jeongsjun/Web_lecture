@@ -1,0 +1,113 @@
+<!--
+    arr1
+    [[1,2,3,4,5],
+    [6,7,8,9,10],
+    [11,12,13,14,15],
+    [16,17,18,19,20],
+    [21,22,23,24,25]]
+
+    arr2
+    [[1,4,7,10,13],
+    [16,19,22,25,28],
+    [31,34,37,40,43],
+    [46,49,52,55,58],
+    [61,64,67,70,73]]
+
+    arr3
+    [[0,0,0,0,0],
+    [0,1,2,3,4],
+    [0,2,4,6,8],
+    [0,3,6,9,12],
+    [0,4,8,12,16]]
+
+    arr4
+    [["00","01","02","03","04"],
+    ["10","11","12","13","14"],
+    ["20","21","22","23","24"],
+    ["30","31","32","33","34"],
+    ["40","41","42","43","44"]]
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+</body>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    // arr1 배열 선언
+    let arr1 = [];
+
+    // 패턴 적용을 위한 변수 선언
+    let countArr1 = 1;
+
+    // 배열에 값 삽입
+    for (let i = 0; i < 5; i++) {
+        arr1[i] = [];
+
+        for (let j = 0; j < 5; j++) {
+            arr1[i][j] = countArr1;
+
+            // arr1은 1씩 늘어나니 1 증가
+            countArr1++;
+        }
+    }
+
+    // arr2 배열 선언
+    let arr2 = [];
+
+    // 패턴 적용을 위한 변수 선언
+    let countArr2 = 1;
+
+    // 배열에 값 삽입
+    for (let i = 0; i < 5; i++) {
+        arr2[i] = [];
+
+        for (let j = 0; j < 5; j++) {
+            arr2[i][j] = countArr2;
+
+            // arr2는 초기값을 제외하고 3씩 늘어나니 3 증가
+            countArr2 += 3;
+        }
+    }
+
+    // arr3 배열 선언
+    let arr3=[];
+
+    // 배열에 값 삽입
+    for (let i = 0; i < 5; i++) {
+        arr3[i] = [];
+
+        let countArr3 = 0;
+
+        for (let j = 0; j < 5; j++) {
+            arr3[i][j] = countArr3;
+
+            // arr3은 초기값 0부터 i값만큼 늘어나니 i 증가
+            countArr3 += i;
+        }
+    }
+
+    // arr3 배열 선언
+    let arr4 = [];
+
+    // 배열에 값 삽입
+    for (let i = 0; i < 5; i++) {
+        arr4[i] = [];
+
+        for (let j = 0; j < 5; j++) {
+            // arr4는 i값과 j값을 더한 문자열이므로 공백문자와 i + j 증가
+            arr4[i][j] = "" + i + j
+        }
+    }
+
+
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    console.log(arr4);
+</script>
+</html>

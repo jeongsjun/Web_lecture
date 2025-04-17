@@ -1,20 +1,30 @@
+<!--
+1200~1400 까지 숫자로 369게임을 만드세요
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
     
 </body>
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-    let startNum = 13000;
-    let endNum = 13334;
+    // 시작 숫자와 끝 숫자 변수 선언
+    let startNum = 1200;
+    let endNum = 1400;
 
+    // 시작 숫자 ~ 끝 숫자까지 반복
     for (let num = startNum; num <= endNum; num++) {
+        // num 문자열 처리
         num += "";
+
+        // 박수 쳐야 할 카운트 변수 선언
         let jjakNum = 0;
+
+        // num 길이만큼 반복해 3, 6, 9가 있을 시 카운트 +1
         for (let j = 0; j < num.length; j++) {
             if (num[j] % 3 == 0 && num[j] != 0) {
                 jjakNum++;
@@ -22,9 +32,11 @@
         }
 
 
+        // 카운트가 0이라면 숫자만 출력
         if (jjakNum == 0) {
             console.log(num)
         }
+        // 아닐 경우 카운트만큼 '짝'글자 출력
         else {
             let str = "";
             for (let i = 0; i < jjakNum; i++) {

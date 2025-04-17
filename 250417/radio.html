@@ -1,0 +1,23 @@
+<!-- 라디오버튼 제어방법 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="r" id="">
+    <input type="radio" name="r" id="">
+    <input type="radio" name="r" id="">
+    <input type="radio" name="r" id="">
+    <input type="button" value="버튼" id = "btn">
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+        console.log(document.getElementsByName("r")[0].checked);
+        console.log(document.getElementsByName("r")[1].checked);
+        console.log(document.getElementsByName("r")[2].checked);
+        console.log(document.getElementsByName("r")[3].checked);
+    });
+</script>
+</html>

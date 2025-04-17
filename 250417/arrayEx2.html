@@ -1,0 +1,25 @@
+<!-- 아래의 결과를 손으로 직접 계산해보면서 결과를 예측해보세요-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr1 = [];
+    let num = 0;
+    for(let i = 0; i < 5; i++) {
+        arr1[i] = [];
+        for (let j = 0; j < 5; j++) {
+            arr1[i][j] = num;
+            num += i*2 + j*3;
+        }
+    }
+
+    console.log(arr1);
+    console.log(num);
+</script>
+</html>

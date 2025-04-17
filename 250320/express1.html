@@ -1,3 +1,4 @@
+<!-- input1, input2로부터 숫자 두 개를 입력받아 두 수의 합이 10 이상인지 아닌지 console에 출력하세요. -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,21 +6,28 @@
     <title>실습</title>
   </head>
   <body>
+    <!-- 숫자 2개 입력 영역 생성-->
     input1 <input type="text" id = "input1">
     input2 <input type="text" id = "input2">
     <input type="button" value = "입력" id = "summit">
     <input type="button" value = "입력2" id = "summit">
   </body>
   <script>
+    // summit 클릭 시 이벤트 처리
     document.getElementById('summit').addEventListener('click', function(){
+      // 입력한 숫자 값 불러오기
       let input1 = document.getElementById('input1').value
       let input2 = document.getElementById('input2').value
 
+      // 숫자의 합 계산
       let sum = Number(input1) + Number(input2)
 
+      // 조건 처리
       if (sum >= 10){
+        // 10 이상일 때
         console.log("두 수의 합은 10 이상입니다.");
       } else {
+        // 10 미만일 때
         console.log("두 수의 합은 10 미만입니다.");
       }
     });

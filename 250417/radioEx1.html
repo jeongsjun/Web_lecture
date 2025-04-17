@@ -1,0 +1,33 @@
+<!-- 라디오 버튼의 숫자를 선택해서 버튼을 클릭했을 때 해당 라디오버튼의 숫자가 
+alert 창으로 뜨게 하세요. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 라디오버튼과 "제출" 버튼 생성-->
+    1 <input type="radio" name="num" id="">
+    2 <input type="radio" name="num" id="">
+    3 <input type="radio" name="num" id="">
+    4 <input type="radio" name="num" id="">
+    5 <input type="radio" name="num" id="">
+    6 <input type="radio" name="num" id="">
+    7 <input type="radio" name="num" id="">
+    <input type="button" value="제출" id = "btn">
+</body>
+<script>
+    // "제출" 버튼을 클릭했을 때
+    document.getElementById("btn").addEventListener("click",function(){
+        for (let i = 0; i < 8; i++) {
+            // 선택된 라디오 버튼일 때
+            if (document.getElementsByName("num")[i].checked) {
+                // 해당 라디오 버튼의 숫자 alert
+                alert(i+1)
+            }
+        }
+    });
+</script>
+</html>

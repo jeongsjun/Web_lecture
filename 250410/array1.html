@@ -1,3 +1,7 @@
+<!--
+arr1 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr2 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +13,11 @@
 </body>
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
+    // 배열 2개 선언
     let arr1 = [];
     let arr2 = [];
 
+    // 반복문과 패턴을 이용해 값 삽입
     for (let i = 0; i < 10; i++) {
         arr1[i] = i + 1;
     }
@@ -20,6 +26,7 @@
         arr2[i] = i * 2;
     }
 
+    // 배열 출력
     console.log(arr1);
     console.log(arr2);
 </script>

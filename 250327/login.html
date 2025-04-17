@@ -1,3 +1,4 @@
+<!-- id, password를 입력 받아서 로그인 버튼을 클릭 했을 때 id가 polytech, password가 12341234면 콘솔창에 “로그인 성공” id 혹은 password가 안맞으면 콘솔창에 “로그인 실패” -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,21 +6,28 @@
     <title></title>
   </head>
   <body>
+    <!-- id, password 입력 영역 생성-->
     id <input type="text" id = "inputID"><br>
     password <input type="password" id = "inputPW"> <input type="button" value="로그인" id="submit">
   </body>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
+    // 내 아이디, 패스워드 변수 선언
     let myID = "polytech";
     let myPW = "12341234";
 
+    // 로그인 버튼 클릭 시 이벤트 처리
     document.getElementById('submit').addEventListener('click', function(){
+      // 입력한 아이디, 패스워드 불러오기
       let inputID = document.getElementById('inputID').value;
       let inputPW = document.getElementById('inputPW').value;
 
+      // 입력한 아이디, 패스워드가 내 아이디, 패스워드와 같다면
       if ((inputID == myID) && (inputPW == myPW)) {
+        // 로그인 성공
         console.log("로그인 성공");
       } else {
+        // 로그인 실패
         console.log("로그인 실패");
       }
     });

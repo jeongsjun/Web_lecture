@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    // 기본 이중 배열 선언법
+    // let student = [];
+    // student[0] = [];
+    // student[1] = [];
+    // student[2] = [];
+
+    // student[0][0] = "0반 0학생"
+    // student[0][1] = "0반 1학생"
+    // student[0][2] = "0반 2학생"
+    
+    // student[1][0] = "1반 0학생"
+    // student[1][1] = "1반 1학생"
+    // student[1][2] = "1반 2학생"
+
+    // student[2][0] = "2반 0학생"
+    // student[2][1] = "2반 1학생"
+    // student[2][2] = "2반 2학생"
+
+    // console.log(student);
+
+    // 반복문을 이용한 배열 선언법
+    // [
+    //     [0,0,0,0],
+    //     [0,0,0,0],
+    //     [0,0,0,0],
+    // ]
+    
+    let arr = [];
+
+    for(let i = 0; i < 3; i++) {
+        arr[i] = [];
+        for(let j = 0; j < 4; j++) {
+            arr[i][j] = i;
+        }
+    }
+
+    console.log(arr);
+</script>
+</html>
